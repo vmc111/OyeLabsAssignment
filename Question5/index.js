@@ -19,7 +19,7 @@ const getGoogleHomePage = () => {
 // Call the promisified function
 getGoogleHomePage()
   .then((response) => {
-    console.log(response);
+    console.log("RESULT==>", response);
   })
   .catch((e) => {
     console.error(e.message);

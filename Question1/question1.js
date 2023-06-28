@@ -37,7 +37,7 @@ app.post("/register/", async (request, response) => {
     response.send("Number already registered");
   } else {
     const addUserQuery = `INSERT INTO user 
-        (number, username, password) 
+        (number, name, password) 
         VALUES (
             ${number}, '${username}', '${password}'
         )`;
