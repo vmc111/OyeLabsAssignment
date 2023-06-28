@@ -35,9 +35,9 @@ startAndRunServer();
 
 app.post("/register/", async (request, response) => {
   const { number, username, password } = request.body;
-  let num = parseInt(number);
+  console.log(number);
   //   Check if user is already registered
-  const checkUserQuery = `SELECT * FROM user WHERE number = ${num};`;
+  const checkUserQuery = `SELECT * FROM user WHERE number = ${number};`;
   const userDetails = await db.get(checkUserQuery);
   if (userDetails !== undefined) {
     response.status(400);
